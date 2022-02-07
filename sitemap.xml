@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyw200199.github.io/2022/02/07/hello-world/</loc>
+    
+    <lastmod>2022-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hyw200199.github.io/friends/index.html</loc>
     
     <lastmod>2022-02-07</lastmod>
@@ -82,15 +91,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://hyw200199.github.io/2022/02/07/hello-world/</loc>
-    
-    <lastmod>2022-02-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://hyw200199.github.io/</loc>
@@ -99,20 +99,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://hyw200199.github.io/tags/%E6%80%9D%E7%BB%B4/</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hyw200199.github.io/tags/%E6%9E%84%E9%80%A0/</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
   <url>
     <loc>https://hyw200199.github.io/tags/%E5%8C%BA%E9%97%B4dp/</loc>
@@ -137,6 +123,20 @@
   
   <url>
     <loc>https://hyw200199.github.io/tags/%E5%87%B8%E5%8C%85/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hyw200199.github.io/tags/%E6%80%9D%E7%BB%B4/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hyw200199.github.io/tags/%E6%9E%84%E9%80%A0/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
