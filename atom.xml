@@ -6,7 +6,7 @@
   <link href="https://hyw200199.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyw200199.github.io/"/>
-  <updated>2022-02-08T16:05:14.523Z</updated>
+  <updated>2022-02-08T16:45:30.583Z</updated>
   <id>https://hyw200199.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>1html基础</title>
+    <link href="https://hyw200199.github.io/2022/02/09/1html-ji-chu/"/>
+    <id>https://hyw200199.github.io/2022/02/09/1html-ji-chu/</id>
+    <published>2022-02-08T16:44:04.000Z</published>
+    <updated>2022-02-08T16:45:30.583Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-html基础&quot;&gt;&lt;a href=&quot;#1-html基础&quot; class=&quot;headerlink&quot; title=&quot;1 html基础&quot;&gt;&lt;/a&gt;1 html基础&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="爬虫" scheme="https://hyw200199.github.io/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="爬虫" scheme="https://hyw200199.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="python" scheme="https://hyw200199.github.io/tags/python/"/>
+    
+    <category term="requests" scheme="https://hyw200199.github.io/tags/requests/"/>
+    
+  </entry>
   
   <entry>
     <title>0初识爬虫</title>
