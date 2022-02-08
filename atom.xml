@@ -6,7 +6,7 @@
   <link href="https://hyw200199.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyw200199.github.io/"/>
-  <updated>2022-02-07T15:47:48.970Z</updated>
+  <updated>2022-02-08T15:52:00.161Z</updated>
   <id>https://hyw200199.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>0初识爬虫</title>
+    <link href="https://hyw200199.github.io/2022/02/08/0-chu-shi-pa-chong/"/>
+    <id>https://hyw200199.github.io/2022/02/08/0-chu-shi-pa-chong/</id>
+    <published>2022-02-08T15:48:38.000Z</published>
+    <updated>2022-02-08T15:52:00.161Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0-认识爬虫&quot;&gt;&lt;a href=&quot;#0-认识爬虫&quot; class=&quot;headerlink&quot; title=&quot;0 认识爬虫&quot;&gt;&lt;/a&gt;0 认识爬虫&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="爬虫" scheme="https://hyw200199.github.io/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="爬虫" scheme="https://hyw200199.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+    <category term="python" scheme="https://hyw200199.github.io/tags/python/"/>
+    
+    <category term="requests" scheme="https://hyw200199.github.io/tags/requests/"/>
+    
+    <category term="协议" scheme="https://hyw200199.github.io/tags/%E5%8D%8F%E8%AE%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>csoj寒假05</title>
