@@ -6,7 +6,7 @@
   <link href="https://hyw200199.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyw200199.github.io/"/>
-  <updated>2022-02-08T16:45:30.583Z</updated>
+  <updated>2022-02-18T15:48:00.695Z</updated>
   <id>https://hyw200199.github.io/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>BZOJ4621:TC605</title>
+    <link href="https://hyw200199.github.io/2022/02/18/bzoj4621-tc605/"/>
+    <id>https://hyw200199.github.io/2022/02/18/bzoj4621-tc605/</id>
+    <published>2022-02-18T15:44:33.000Z</published>
+    <updated>2022-02-18T15:48:00.695Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://bzoj.noip.space/p/4621.html&quot;&gt;题目传送门&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://hyw200199.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="dp计数" scheme="https://hyw200199.github.io/tags/dp%E8%AE%A1%E6%95%B0/"/>
+    
+    <category term="难题" scheme="https://hyw200199.github.io/tags/%E9%9A%BE%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>1html基础</title>
     <link href="https://hyw200199.github.io/2022/02/09/1html-ji-chu/"/>
     <id>https://hyw200199.github.io/2022/02/09/1html-ji-chu/</id>
     <published>2022-02-08T16:44:04.000Z</published>
-    <updated>2022-02-08T16:45:30.583Z</updated>
+    <updated>2022-02-12T07:22:48.173Z</updated>
     
     
       
