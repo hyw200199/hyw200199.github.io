@@ -6,7 +6,7 @@
   <link href="https://hyw200199.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyw200199.github.io/"/>
-  <updated>2022-02-18T15:48:00.695Z</updated>
+  <updated>2022-04-27T05:03:13.113Z</updated>
   <id>https://hyw200199.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022天梯赛</title>
+    <link href="https://hyw200199.github.io/2022/04/27/2022-tian-ti-sai/"/>
+    <id>https://hyw200199.github.io/2022/04/27/2022-tian-ti-sai/</id>
+    <published>2022-04-27T05:01:43.000Z</published>
+    <updated>2022-04-27T05:03:13.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;2022天梯赛&quot;&gt;&lt;a href=&quot;#2022天梯赛&quot; class=&quot;headerlink&quot; title=&quot;2022天梯赛&quot;&gt;&lt;/a&gt;2022天梯赛&lt;/h1&gt;&lt;h1 id=&quot;L1&quot;&gt;&lt;a href=&quot;#L1&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://hyw200199.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="拓扑排序" scheme="https://hyw200199.github.io/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/"/>
+    
+    <category term="dfs序" scheme="https://hyw200199.github.io/tags/dfs%E5%BA%8F/"/>
+    
+    <category term="记忆化搜索" scheme="https://hyw200199.github.io/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/"/>
+    
+    <category term="剪枝" scheme="https://hyw200199.github.io/tags/%E5%89%AA%E6%9E%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>BZOJ4621:TC605</title>
