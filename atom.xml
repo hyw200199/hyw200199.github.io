@@ -6,7 +6,7 @@
   <link href="https://hyw200199.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyw200199.github.io/"/>
-  <updated>2022-05-02T11:30:28.231Z</updated>
+  <updated>2022-05-07T03:29:50.073Z</updated>
   <id>https://hyw200199.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5月8号补题</title>
+    <link href="https://hyw200199.github.io/2022/05/08/5-yue-8-hao-bu-ti/"/>
+    <id>https://hyw200199.github.io/2022/05/08/5-yue-8-hao-bu-ti/</id>
+    <published>2022-05-08T02:37:59.000Z</published>
+    <updated>2022-05-07T03:29:50.073Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;http://oj.daimayuan.top/course/10/problem/731&quot;&gt;数字替换 - 题目 - Daimayuan Online Judge&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://hyw200199.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="前缀和" scheme="https://hyw200199.github.io/tags/%E5%89%8D%E7%BC%80%E5%92%8C/"/>
+    
+    <category term="贪心" scheme="https://hyw200199.github.io/tags/%E8%B4%AA%E5%BF%83/"/>
+    
+    <category term="状态压缩" scheme="https://hyw200199.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/"/>
+    
+    <category term="思维" scheme="https://hyw200199.github.io/tags/%E6%80%9D%E7%BB%B4/"/>
+    
+    <category term="树状数组" scheme="https://hyw200199.github.io/tags/%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="树形dp" scheme="https://hyw200199.github.io/tags/%E6%A0%91%E5%BD%A2dp/"/>
+    
+    <category term="混合背包" scheme="https://hyw200199.github.io/tags/%E6%B7%B7%E5%90%88%E8%83%8C%E5%8C%85/"/>
+    
+    <category term="分组背包" scheme="https://hyw200199.github.io/tags/%E5%88%86%E7%BB%84%E8%83%8C%E5%8C%85/"/>
+    
+    <category term="分层图" scheme="https://hyw200199.github.io/tags/%E5%88%86%E5%B1%82%E5%9B%BE/"/>
+    
+    <category term="组合数学" scheme="https://hyw200199.github.io/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>4月30号训练任务</title>
