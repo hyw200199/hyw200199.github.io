@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="csoj寒假05, love &amp; peace">
-    <meta name="description" content="">
+    <meta name="keywords" content="空气污染预测, love &amp; peace">
+    <meta name="description" content="空气污染预测摘要作者：胡耀文
+本文用北京2010年到2014年气压风向雨雪量等相关物理量的数据集，用LSTM做模型优化，来预测PM2.5浓度。
+目前均方差在34左右，还有优化空间。后续会爬取广州的相关天气信息，来预测广州的空气污染程度。
+第">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +20,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>csoj寒假05 | Tokyo Ghoul</title>
+    <title>空气污染预测 | Tokyo Ghoul</title>
     <link rel="icon" type="image/jpeg" href="/jinmuyan.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -344,12 +347,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/jinx10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/%E5%AE%89%E6%99%BA%E7%84%9517.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">csoj寒假05</h1>
+                    <h1 class="description center-align post-title">空气污染预测</h1>
                 </div>
             </div>
         </div>
@@ -465,20 +468,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/">
-                                <span class="chip bg-color">树链剖分</span>
+                            <a href="/tags/LSTM/">
+                                <span class="chip bg-color">LSTM</span>
                             </a>
                         
-                            <a href="/tags/%E5%8C%BA%E9%97%B4dp/">
-                                <span class="chip bg-color">区间dp</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%9C%9F%E6%9C%9Bdp/">
-                                <span class="chip bg-color">期望dp</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%87%B8%E5%8C%85/">
-                                <span class="chip bg-color">凸包</span>
+                            <a href="/tags/%E7%89%B9%E5%BE%81%E9%A2%84%E6%B5%8B/">
+                                <span class="chip bg-color">特征预测</span>
                             </a>
                         
                     </div>
@@ -489,8 +484,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                算法
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category">
+                                人工智能
                             </a>
                         
                     </div>
@@ -502,28 +497,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-07
+                    2022-05-17
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-07
+                    2022-05-17
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    7 分
                 </div>
                 
 
@@ -543,7 +538,125 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="空气污染预测"><a href="#空气污染预测" class="headerlink" title="空气污染预测"></a>空气污染预测</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>作者：胡耀文</p>
+<p>本文用北京2010年到2014年气压风向雨雪量等相关物理量的数据集，用LSTM做模型优化，来预测PM2.5浓度。</p>
+<p>目前均方差在34左右，还有优化空间。后续会爬取广州的相关天气信息，来预测广州的空气污染程度。</p>
+<h2 id="第一，数据集"><a href="#第一，数据集" class="headerlink" title="第一，数据集"></a>第一，数据集</h2><p><img src="https://img-blog.csdnimg.cn/ce84acf58e204100a2cbdfcb17effac8.png" alt="在这里插入图片描述"></p>
+<p>数据集是kaggle上找的，是北京2010年1月1日到2014年12月31日的数据</p>
+<p><img src="https://img-blog.csdnimg.cn/0e8b011c399540738da07338e4f422a7.png" alt="在这里插入图片描述"></p>
+<p>No是编号</p>
+<p>year是年</p>
+<p>month是月</p>
+<p>day是日</p>
+<p>hour是小时</p>
+<p>PM2.5是预测值</p>
+<p>DEWP是露点</p>
+<p>TEMP是温度</p>
+<p>PRES是大气压</p>
+<p>cbwd是风向</p>
+<p>lws是风速</p>
+<p>Is是累积雨量</p>
+<p>lr是累计雪量</p>
+<p>每隔一小时就会采取一次数据</p>
+<h3 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h3><ul>
+<li><p>对NAN空值如果删掉的话会影响数据集的序列结构，所以这里采取前向填充</p>
+</li>
+<li><p>删掉编号，将年月日时用datetime压成一维作为唯一索引</p>
+</li>
+<li><p>风向有4个，用独热编码处理，从而删掉风向cbwd这一特征</p>
+</li>
+<li><p>至此，总计11个特征，用这11个特征来作为预测指标</p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/150905a9d63841f2884be2345ed20117.png" alt="在这里插入图片描述"></p>
+<h3 id="策略采取"><a href="#策略采取" class="headerlink" title="策略采取"></a>策略采取</h3><p>预测的时候，由于选择过早的数据或者过少的数据都是不对的</p>
+<p>比如，仅仅用今天这一天的数据来预测明天的值是不恰的</p>
+<p>或者用前一个月的值来预测明天的值也是过于浪费</p>
+<p>用前一个星期的值就差不多了</p>
+<p>在这里，我用了前五天的数据来预测第六天第24h的数据</p>
+<p><img src="https://img-blog.csdnimg.cn/2b11428f911949189363d083a3743b29.png" alt="在这里插入图片描述"></p>
+<p>总数据集的百分之80作为训练数据，百分之20作为测试数据</p>
+<p>至此，数据集部分处理完毕，</p>
+<p>现在让我们看看要预测的PM2.5长啥样</p>
+<p>下图是最后1000组PM2.5的数据</p>
+<p><img src="https://img-blog.csdnimg.cn/61bc53be76754227bd4d0c331f8a7b59.png" alt="在这里插入图片描述"></p>
+<p>（emm如果你在北京为了肺好，建议昼伏夜出hhh~~</p>
+<h2 id="第二，模型训练，传统卷积和LSTM的比较"><a href="#第二，模型训练，传统卷积和LSTM的比较" class="headerlink" title="第二，模型训练，传统卷积和LSTM的比较"></a>第二，模型训练，传统卷积和LSTM的比较</h2><p>这是最简单的卷积层</p>
+<p><img src="https://img-blog.csdnimg.cn/2c4611cc77e346569d28a2a57afb4867.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/d77e9bc52ed740549f12277e0517701f.png" alt="在这里插入图片描述"></p>
+<p>50epoch之后总差值大于在5000，均方差大约在52左右</p>
+<p><img src="https://img-blog.csdnimg.cn/cee877a1f6ee4a97896ab4e3a559d26b.png" alt="在这里插入图片描述"></p>
+<p>接下来看看LSTM</p>
+<p><img src="https://img-blog.csdnimg.cn/90300848f9914597b7e53357763fedb2.png" alt="在这里插入图片描述"></p>
+<p>我在看官方文档的时候抄错好几次reduceLROnPlateau！！！！然后很莫名其妙的报了好多错</p>
+<p>看来以后还是直接copy文档</p>
+<p><img src="https://img-blog.csdnimg.cn/6161ed7c58f34e26985d489f26fa6a97.png" alt="在这里插入图片描述"></p>
+<p>我没记错的话LSTM特别的一个地方就是输入到输出这个过程会产生一组序列，叫中间状态，参与下一轮的输入到输出的计算</p>
+<p>然后循环产生输出</p>
+<p>这种特殊的运算结构让它特别擅长捕捉时间变化的趋势，比如对于星期一这样的数据，星期二会变成这样，对于星期二这样的数据，星期三会变成这样，……..，进而对星期六的数据进行较为精准的预测</p>
+<p>我的理解就是：</p>
+<p>如果这种时间戳的相对关系是对于要预测的指标是存在某种关系的话，那么LSTM在预测时会把这层关系计算进去，</p>
+<p>在同等方法里面会很有优势，但如果根本不存在这种关系的话，就会出现“用了等于没用”的情况，</p>
+<p>所以针对不同情况，要搭配不同的模型去计算，去预测，</p>
+<p>这也是为什么人工智能行业一直在更迅捷的发展，</p>
+<p>因为对于某种特定情况，可能目前为止没有哪一种模型更为契合，那么你就要“设计”一种方法，一种计算方法，</p>
+<p>如果跑出来的结果比T0要好，那么你就是新的T0了哈哈</p>
+<p>下图是开50epoch的时候跑出来的结果：</p>
+<p><img src="https://img-blog.csdnimg.cn/7df975e7ac9543c5a30c104b5e7ff7d7.png" alt="在这里插入图片描述"></p>
+<p>最后发现总方差在2966，均方差在34，从结果来看确实更好一点</p>
+<p>LSTM使用的时候有两个点要注意一下：</p>
+<ul>
+<li>LSTM网络接受的是三维数据（batch，时间观测，特征）</li>
+<li>堆叠LSTM网络，需要设置return_sequences=True,意思是对每个序列预测结果进行输出</li>
+</ul>
+<h2 id="第三，模型评价，多组数据预测和单组数据预测"><a href="#第三，模型评价，多组数据预测和单组数据预测" class="headerlink" title="第三，模型评价，多组数据预测和单组数据预测"></a>第三，模型评价，多组数据预测和单组数据预测</h2><p>多组数据预测，可以直接用那把百分之20的test_x</p>
+<p><img src="https://img-blog.csdnimg.cn/6776f7b73b0740b8a2ea71abec864996.png" alt="在这里插入图片描述"></p>
+<p>最后发现这8732条数据总方差在2966，均方差在34，</p>
+<p>对单组数据进行预测</p>
+<p><img src="https://img-blog.csdnimg.cn/9b88911e0a9e4a6788d65cb62ca1c97b.png" alt="在这里插入图片描述"></p>
+<p>我们用最后的数据来预测2015年1月1日23时的情况</p>
+<p><img src="https://img-blog.csdnimg.cn/fc23c3fb5f1f462c9d1cff75d2a7c54a.png" alt="在这里插入图片描述"></p>
+<p>跑出来的结果是41</p>
+<p>我们现在去官网查看北京历史空气污染数据</p>
+<p><img src="https://img-blog.csdnimg.cn/599f0886bcb34af18cef279f8855f7d3.png" alt="在这里插入图片描述"></p>
+<p>这里的数据是一整天的平均PM2.5浓度</p>
+<p>2015年1月1日 平均浓度是41</p>
+<p>2015年1月2日 平均浓度是51</p>
+<p>预测1月1日23时的浓度时41</p>
+<p>差值较小，跑出来的模型灰常ojbk！</p>
+<h2 id="第四，广州天气情况的爬取"><a href="#第四，广州天气情况的爬取" class="headerlink" title="第四，广州天气情况的爬取"></a>第四，广州天气情况的爬取</h2><p>只写了一点点，</p>
+<p>爬取中国气象网</p>
+<p><a target="_blank" rel="noopener" href="http://www.weather.com.cn/weather1d/101280101.shtml">http://www.weather.com.cn/weather1d/101280101.shtml</a></p>
+<p>上面这个网址是广东的天气信息</p>
+<p>下面是爬取到当天24h的信息</p>
+<p><img src="https://img-blog.csdnimg.cn/7ec34b6162f041a082fa24bb992b2b57.png" alt="在这里插入图片描述"></p>
+<p>大约18，19摄氏度这样子，今天看看这个中国气象网有没有骗人。</p>
+<h2 id="第五，总结与思考"><a href="#第五，总结与思考" class="headerlink" title="第五，总结与思考"></a>第五，总结与思考</h2><p>只要有相关特征，对某一指标的预测都可以用LSTM网络，都是ok的，</p>
+<p>很多小tips都是在当前所学上进行一个小的拓展，</p>
+<p>比如我在学openvino的时候，看人脸骨骼关键点检测，用这个东西你可以针对某些特定的关节点进行讨论</p>
+<p>来完成一些奇奇怪怪的检测，比如看这个人有没有张嘴，或者看这个人眼睛有没有闭上，然后美其名曰：<br>人类公共场所喧哗检测，网课是否打瞌睡智能检测……</p>
+<p>这些都是比较初级的，更高级一点的就是表情检测，导入某些表情参数，通过对人脸的识别判断是angry还是happy还是sad</p>
+<p>等等。</p>
+<p>回到这个空气污染预测，其实是这些指标能够较为充分的描述和概括PM2.5这个指标，所以有了比较好的预测结果，</p>
+<p>预测气温，预测天气，预测空气湿度也是同样的道理，比如说如果是空气湿度，先去百度、知网找一找相关论文，看</p>
+<p>空气湿度跟哪些因素有关，然后找一找网上有没有现成数据集，没有的话要去哪里爬取</p>
+<p>整合成数据集然后进行特征提取训练……巴拉巴拉一大堆，然后你的一个小项目就水完了。</p>
+<p>但很多时候不是一帆风顺的</p>
+<p>在写的时候难免会遇到很多坑点</p>
+<p>比如新版本有一些奇奇怪怪的错误，你去stack overflow搜的时候看到 “I also meet this problem, </p>
+<p>I think what is about the upgrade , I had send email to them but they didnt give me a feedback”</p>
+<p>那才是最最崩溃的。</p>
+<h3 id="kaggle与colab的区别"><a href="#kaggle与colab的区别" class="headerlink" title="kaggle与colab的区别"></a>kaggle与colab的区别</h3><p>这次的全部代码我都是用colab敲的，自从升级成win11之后，我本地搭建的jupyter notebook跑一点点就宕机了，</p>
+<p>昨晚第一次使用colab，给我的感觉就是白嫖真的香！很简约风，免费版的算力只有一般CPU的两倍，付费版的能达到6.5倍</p>
+<p>要搭梯子，好不好用取决于你的梯子OK不OK，数据集的话不像kaggle那样自己弄了个dataset平台，很轻量级，</p>
+<p>当然要用的话也可以用kaggle提供的API下载。</p>
+<p>kaggle的话貌似不用搭梯子，里面有很多现成的数据集可以使用，这一点比colab方便很多，功能比较全更像是一个小型github</p>
+<p>唯一的痛点就是要注册，而且真的很麻烦，我当时注册的时候反正就一直verify不成功，网上也没有好的解决方案，然后发邮件</p>
+<p>过了十几个小时这样子那边 i am sorry to trouble 巴拉巴拉一大堆，反正终于ok终于注册成功了！</p>
+<p>如果有更高追求的话，可以没有colab但不能没有kaggle，还是建议两边都去弄一个号。</p>
+<p>最后代码挂在github上，题解报告也挂在了博客里，需要可自取</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hyw200199/AI">hyw200199/AI (github.com)</a></p>
+
                 
             </div>
             <hr/>
@@ -569,7 +682,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hyw200199.github.io/2022/02/07/csoj-han-jia-05/">https://hyw200199.github.io/2022/02/07/csoj-han-jia-05/</a>
+                    <a href="https://hyw200199.github.io/2022/05/17/kong-qi-wu-ran-yu-ce/">https://hyw200199.github.io/2022/05/17/kong-qi-wu-ran-yu-ce/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -607,20 +720,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/">
-                                    <span class="chip bg-color">树链剖分</span>
+                                <a href="/tags/LSTM/">
+                                    <span class="chip bg-color">LSTM</span>
                                 </a>
                             
-                                <a href="/tags/%E5%8C%BA%E9%97%B4dp/">
-                                    <span class="chip bg-color">区间dp</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%9C%9F%E6%9C%9Bdp/">
-                                    <span class="chip bg-color">期望dp</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%87%B8%E5%8C%85/">
-                                    <span class="chip bg-color">凸包</span>
+                                <a href="/tags/%E7%89%B9%E5%BE%81%E9%A2%84%E6%B5%8B/">
+                                    <span class="chip bg-color">特征预测</span>
                                 </a>
                             
                         </div>
@@ -794,17 +899,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/02/08/0-chu-shi-pa-chong/">
+                <a href="/2022/05/17/kong-qi-wu-ran-yu-ce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/girl.jpg" class="responsive-img" alt="0初识爬虫">
+                        <img src="/medias/featureimages/%E5%AE%89%E6%99%BA%E7%84%9517.jpg" class="responsive-img" alt="空气污染预测">
                         
-                        <span class="card-title">0初识爬虫</span>
+                        <span class="card-title">空气污染预测</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -814,38 +920,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-02-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category">
+                                    人工智能
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%88%AC%E8%99%AB/">
-                        <span class="chip bg-color">爬虫</span>
+                    <a href="/tags/LSTM/">
+                        <span class="chip bg-color">LSTM</span>
                     </a>
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/requests/">
-                        <span class="chip bg-color">requests</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%8D%8F%E8%AE%AE/">
-                        <span class="chip bg-color">协议</span>
+                    <a href="/tags/%E7%89%B9%E5%BE%81%E9%A2%84%E6%B5%8B/">
+                        <span class="chip bg-color">特征预测</span>
                     </a>
                     
                 </div>
@@ -859,13 +958,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/07/cf770-div2-ti-jie/">
+                <a href="/2022/05/13/shu-lian-pou-fen/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/%E5%AE%89%E6%99%BA%E7%84%953.jpg" class="responsive-img" alt="cf770_div2题解">
+                        <img src="/medias/featureimages/%E5%AE%89%E6%99%BA%E7%84%9519.jpg" class="responsive-img" alt="树链剖分">
                         
-                        <span class="card-title">cf770_div2题解</span>
+                        <span class="card-title">树链剖分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -876,7 +975,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-13
                             </span>
                         <span class="publish-author">
                             
@@ -893,12 +992,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%80%9D%E7%BB%B4/">
-                        <span class="chip bg-color">思维</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
-                    <a href="/tags/%E6%9E%84%E9%80%A0/">
-                        <span class="chip bg-color">构造</span>
+                    <a href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/">
+                        <span class="chip bg-color">树链剖分</span>
                     </a>
                     
                 </div>
