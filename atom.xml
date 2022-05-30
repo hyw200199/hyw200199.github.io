@@ -6,7 +6,7 @@
   <link href="https://hyw200199.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyw200199.github.io/"/>
-  <updated>2022-05-17T01:50:36.236Z</updated>
+  <updated>2022-05-30T22:07:23.975Z</updated>
   <id>https://hyw200199.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>四分树</title>
+    <link href="https://hyw200199.github.io/2022/05/31/si-fen-shu/"/>
+    <id>https://hyw200199.github.io/2022/05/31/si-fen-shu/</id>
+    <published>2022-05-30T22:06:18.000Z</published>
+    <updated>2022-05-30T22:07:23.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ZOJ-1788-Quad-Trees&quot;&gt;&lt;a href=&quot;#ZOJ-1788-Quad-Trees&quot; class=&quot;headerlink&quot; title=&quot;ZOJ 1788 Quad Trees&quot;&gt;&lt;/a&gt;ZOJ 1788 Quad</summary>
+        
+      
+    
+    
+    
+    <category term="算法" scheme="https://hyw200199.github.io/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+    <category term="数据结构" scheme="https://hyw200199.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="四分树" scheme="https://hyw200199.github.io/tags/%E5%9B%9B%E5%88%86%E6%A0%91/"/>
+    
+  </entry>
   
   <entry>
     <title>空气污染预测</title>
@@ -338,11 +365,11 @@
     <category term="算法" scheme="https://hyw200199.github.io/categories/%E7%AE%97%E6%B3%95/"/>
     
     
-    <category term="树链剖分" scheme="https://hyw200199.github.io/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
-    
     <category term="区间dp" scheme="https://hyw200199.github.io/tags/%E5%8C%BA%E9%97%B4dp/"/>
     
     <category term="期望dp" scheme="https://hyw200199.github.io/tags/%E6%9C%9F%E6%9C%9Bdp/"/>
+    
+    <category term="树链剖分" scheme="https://hyw200199.github.io/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
     
     <category term="凸包" scheme="https://hyw200199.github.io/tags/%E5%87%B8%E5%8C%85/"/>
     

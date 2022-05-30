@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="BZOJ4621:TC605, love &amp; peace">
-    <meta name="description" content="题目传送门
-【BZOJ4621】Tc605_supreme567的博客-CSDN博客
-Description最初你有一个长度为 N 的数字序列 A。为了方便起见，序列 A 是一个排列。你可以操作最多 K 次。每一次操作你可以先选定一个 A ">
+    <meta name="keywords" content="四分树, love &amp; peace">
+    <meta name="description" content="ZOJ 1788 Quad Trees
+在acm竞赛里面，用指针写的题解一般都是过不了的但是翻看了题解区和咱老师在例如云上的题解几乎都是这样写的强迫症逼得我写了篇动态开点得题解
+1234567891011121314151617181920">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>BZOJ4621:TC605 | Tokyo Ghoul</title>
+    <title>四分树 | Tokyo Ghoul</title>
     <link rel="icon" type="image/jpeg" href="/jinmuyan.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -351,7 +351,7 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">BZOJ4621:TC605</h1>
+                    <h1 class="description center-align post-title">四分树</h1>
                 </div>
             </div>
         </div>
@@ -467,12 +467,12 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/dp%E8%AE%A1%E6%95%B0/">
-                                <span class="chip bg-color">dp计数</span>
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                <span class="chip bg-color">数据结构</span>
                             </a>
                         
-                            <a href="/tags/%E9%9A%BE%E9%A2%98/">
-                                <span class="chip bg-color">难题</span>
+                            <a href="/tags/%E5%9B%9B%E5%88%86%E6%A0%91/">
+                                <span class="chip bg-color">四分树</span>
                             </a>
                         
                     </div>
@@ -496,21 +496,21 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-02-18
+                    2022-05-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-02-18
+                    2022-05-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    788
+                    564
                 </div>
                 
 
@@ -537,26 +537,11 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><a target="_blank" rel="noopener" href="http://bzoj.noip.space/p/4621.html">题目传送门</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/supreme567/article/details/123011165">【BZOJ4621】Tc605_supreme567的博客-CSDN博客</a></p>
-<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>最初你有一个长度为 N 的数字序列 A。为了方便起见，序列 A 是一个排列。<br>你可以操作最多 K 次。每一次操作你可以先选定一个 A 的一个子串，然后将这个子串的数字全部变成原来这个子串的最大值。问最终有几种可能的数字序列。答案对 1e9+7 取模。</p>
-<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p>第一行两个数 N 和 K。第二行 N 个数，描述一个排列 A。<br>N,K&lt;=500，</p>
-<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p>输出一个数，表示答案在模域下的值。 </p>
-<h2 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h2><p>3 2<br>3 1 2</p>
-<h2 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h2><p>4</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>这是一道求区间覆盖方案数的题目<br>首先第一点，要了解相对位置对答案的贡献<br>比如313和331和133是3个不同的状态<br>所谓相对位置就是样例中的312，2相对于1在它的右边，3相对于1和2在它们的左边<br><img src="https://img-blog.csdnimg.cn/25e81da425314d5db5dd3b3bd9ea87cf.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6IOhIOiAgOaWhw==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>我们把每个数字看成一个区间,问题转化为有n个区间覆盖m次求不同结果状态的数量<br>我们可以发现，每个数字的方案数=能覆盖的区间方案数之和<br>即<br>$$<br>f(i)=\sum_{k=l}^{k=r}f(k)<br>$$<br>比如上述就是$f(3)=f(1)+f(1),f(7)=f(3)+f(5)$</p>
-<p>现在我们要考虑如何操作使得答案的统计<strong>不重不漏</strong></p>
-<p>设$f[i][j]表示选择j个区间并且区间要刚好覆盖到第i个数字的方案数$</p>
-<p><img src="https://img-blog.csdnimg.cn/edd95044205045d9997e3c0eee419cc5.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA6IOhIOiAgOaWhw==,size_20,color_FFFFFF,t_70,g_se,x_16" alt="在这里插入图片描述"><br>把第j次操作的时候，选择的区间要从i-1，i-2，i-3……覆盖到 i<br>于是就有了状态转移方程$f[i][j]=\sum_{k=0}^{k=i-1}f[k][j-1]$<br>但是在最优情况下是不会选单个序列的，也就是说<br>$f[i-1][j-1]对f[i][j]没有意义，我是不会选择这个操作的，也就是说要保持这个状态我只需要j-1次操作$</p>
-<p>前缀和优化<br>代码如下：</p>
-<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">550</span>;</span><br><span class="line"><span class="type">int</span> f[N][N],a[N],n,m;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);</span><br><span class="line">    cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)cin&gt;&gt;a[i];</span><br><span class="line">    f[<span class="number">0</span>][<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++){</span><br><span class="line">        <span class="type">int</span> l=i,r=i;</span><br><span class="line">        <span class="keyword">while</span>(l&gt;<span class="number">1</span>&amp;&amp;a[i]&gt;a[l<span class="number">-1</span>])l--;</span><br><span class="line">        <span class="keyword">while</span>(r&lt;n&amp;&amp;a[i]&gt;a[r+<span class="number">1</span>])r++;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=m;j&gt;=<span class="number">0</span>;j--){</span><br><span class="line">            f[i][j]=(f[i][j]+f[i<span class="number">-1</span>][j])%mod;<span class="comment">//我选了j个区间覆盖到i-1了</span></span><br><span class="line">            <span class="keyword">if</span>(j==<span class="number">0</span>)<span class="keyword">continue</span>;</span><br><span class="line">            <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> k=l;k&lt;=r;k++){</span><br><span class="line">                sum=(sum+f[k<span class="number">-1</span>][j<span class="number">-1</span>])%mod;</span><br><span class="line">                f[k][j]=(f[k][j]+sum)%mod;</span><br><span class="line">            }</span><br><span class="line">            f[i][j]=(f[i][j]-f[i<span class="number">-1</span>][j<span class="number">-1</span>]+mod)%mod;<span class="comment">//减去不符合题意的答案</span></span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> j=m;j&gt;=<span class="number">0</span>;j--)ans=(ans+f[n][j])%mod;</span><br><span class="line">    cout&lt;&lt;ans;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
-
-<p>想法：<br>它为什么是收敛的？也就是说随着可选区间数的不断增加它的方案数最终会趋向0？<br>小结：<br>dp牢记</p>
-<ul>
-<li>问题的转化</li>
-<li>dp状态的定义要清晰！</li>
-<li>dp状态的计算要怎样才能不重复不漏掉</li>
-</ul>
+                <h1 id="ZOJ-1788-Quad-Trees"><a href="#ZOJ-1788-Quad-Trees" class="headerlink" title="ZOJ 1788 Quad Trees"></a>ZOJ 1788 Quad Trees</h1><p><img src="https://img-blog.csdnimg.cn/cb0ad1d6c8d642eaa6a0fa7dbbcc751a.png" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/88a5b695643043b9a42fd7327e71f949.png" alt="在这里插入图片描述"><br>在acm竞赛里面，用指针写的题解一般都是过不了的<br>但是翻看了题解区和咱老师在例如云上的题解几乎都是这样写的<br>强迫症逼得我写了篇动态开点得题解</p>
+<figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> T,n,o,idx;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">600</span>;</span><br><span class="line"><span class="type">char</span> a[N][N];</span><br><span class="line">unordered_map&lt;<span class="type">int</span>,string&gt;mp;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>{</span><br><span class="line">    string v;</span><br><span class="line">    <span class="type">int</span> child[<span class="number">4</span>];</span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> s0 tr[tr[u].child[0]]</span></span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> s1 tr[tr[u].child[1]]</span></span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> s2 tr[tr[u].child[2]]</span></span><br><span class="line">    <span class="meta">#<span class="keyword">define</span> s3 tr[tr[u].child[3]]</span></span><br><span class="line">}tr[<span class="number">1000010</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> l)</span></span>{</span><br><span class="line">    <span class="type">int</span> u=++o;</span><br><span class="line">    <span class="keyword">if</span>(l==<span class="number">1</span>){</span><br><span class="line">        tr[u].v=<span class="string">"0"</span>;</span><br><span class="line">        tr[u].v+=a[x][y];</span><br><span class="line">        <span class="keyword">return</span> u;</span><br><span class="line">    }</span><br><span class="line">    l/=<span class="number">2</span>;</span><br><span class="line">    tr[u].child[<span class="number">0</span>]=<span class="built_in">dfs</span>(x,y,l);</span><br><span class="line">    tr[u].child[<span class="number">1</span>]=<span class="built_in">dfs</span>(x,y+l,l);</span><br><span class="line">    tr[u].child[<span class="number">2</span>]=<span class="built_in">dfs</span>(x+l,y,l);</span><br><span class="line">    tr[u].child[<span class="number">3</span>]=<span class="built_in">dfs</span>(x+l,y+l,l);</span><br><span class="line">    <span class="type">bool</span> flag=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(s0.v==<span class="string">"1"</span>)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(s1.v==<span class="string">"1"</span>)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(s2.v==<span class="string">"1"</span>)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(s3.v==<span class="string">"1"</span>)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">// for(int i=0;i&lt;4;i++){</span></span><br><span class="line">    <span class="comment">//     if(tr[tr[u].child[i]].v=="1")flag=0;</span></span><br><span class="line">    <span class="comment">// }</span></span><br><span class="line">    <span class="keyword">if</span>(s1.v!=s0.v)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(s2.v!=s0.v)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(s3.v!=s0.v)flag=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">// for(int i=1;i&lt;4;i++){</span></span><br><span class="line">    <span class="comment">//     if(tr[tr[u].child[i]].v!=s0.v)flag=0;</span></span><br><span class="line">    <span class="comment">// }</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(flag)tr[u].v=s0.v;</span><br><span class="line">    <span class="keyword">else</span> tr[u].v=<span class="string">"1"</span>;</span><br><span class="line">    <span class="keyword">return</span> u;</span><br><span class="line">}</span><br><span class="line"><span class="function">string <span class="title">bfs</span><span class="params">(<span class="type">int</span> u)</span></span>{</span><br><span class="line">    string ans;</span><br><span class="line">    <span class="keyword">if</span>(tr[u].v[<span class="number">0</span>]==<span class="string">'0'</span>)<span class="keyword">return</span> ans=tr[u].v[<span class="number">1</span>];</span><br><span class="line">    queue&lt;<span class="type">int</span>&gt;q;</span><br><span class="line">    q.<span class="built_in">push</span>(u);</span><br><span class="line">    <span class="keyword">while</span>(q.<span class="built_in">size</span>()){</span><br><span class="line">        <span class="type">int</span> x=q.<span class="built_in">front</span>();</span><br><span class="line">        q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="keyword">if</span>(tr[x].v[<span class="number">0</span>]==<span class="string">'0'</span>)ans+=tr[x].v;</span><br><span class="line">        <span class="keyword">else</span>{</span><br><span class="line">            ans+=tr[x].v;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;<span class="number">4</span>;i++)q.<span class="built_in">push</span>(tr[x].child[i]);</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>{</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    o=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++){</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n;j++)cin&gt;&gt;a[i][j];</span><br><span class="line">    }</span><br><span class="line">    <span class="type">int</span> u=<span class="built_in">dfs</span>(<span class="number">0</span>,<span class="number">0</span>,n);</span><br><span class="line">    string ans=<span class="built_in">bfs</span>(u);</span><br><span class="line">    <span class="type">int</span> len=ans.<span class="built_in">length</span>();</span><br><span class="line">    <span class="keyword">if</span>(len%<span class="number">4</span>==<span class="number">1</span>)ans=<span class="string">"000"</span>+ans;</span><br><span class="line">    <span class="keyword">if</span>(len%<span class="number">4</span>==<span class="number">2</span>)ans=<span class="string">"00"</span>+ans;</span><br><span class="line">    <span class="keyword">if</span>(len%<span class="number">4</span>==<span class="number">3</span>)ans=<span class="string">"0"</span>+ans;</span><br><span class="line">    <span class="comment">//cout&lt;&lt;"ans="&lt;&lt;ans&lt;&lt;'\n';</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;ans.<span class="built_in">length</span>();i+=<span class="number">4</span>){</span><br><span class="line">        <span class="type">int</span> t=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>,p=<span class="number">8</span>;j&lt;<span class="number">4</span>;j++,p/=<span class="number">2</span>)t+=p*(ans[i+j]-<span class="string">'0'</span>);</span><br><span class="line">        <span class="keyword">if</span>(t&lt;<span class="number">10</span>)cout&lt;&lt;t;</span><br><span class="line">        <span class="keyword">else</span> cout&lt;&lt;mp[t];</span><br><span class="line">    }</span><br><span class="line">    cout&lt;&lt;<span class="string">'\n'</span>;</span><br><span class="line">}</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">    mp[<span class="number">10</span>]=<span class="string">"A"</span>;</span><br><span class="line">    mp[<span class="number">11</span>]=<span class="string">"B"</span>;</span><br><span class="line">    mp[<span class="number">12</span>]=<span class="string">"C"</span>;</span><br><span class="line">    mp[<span class="number">13</span>]=<span class="string">"D"</span>;</span><br><span class="line">    mp[<span class="number">14</span>]=<span class="string">"E"</span>;</span><br><span class="line">    mp[<span class="number">15</span>]=<span class="string">"F"</span>;</span><br><span class="line">    ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    <span class="keyword">while</span>(T--)<span class="built_in">solve</span>();</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<hr>
+<p><img src="https://img-blog.csdnimg.cn/fdc285556900451b86d7fcc4783a051b.png" alt="在这里插入图片描述"><br>按道理来说我的run time（46ms）应该是更小的，但是还是跑的比指针（19ms）写的慢<br>可能是我常数比较大吧hh</p>
 
                 
             </div>
@@ -583,7 +568,7 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://hyw200199.github.io/2022/02/18/bzoj4621-tc605/">https://hyw200199.github.io/2022/02/18/bzoj4621-tc605/</a>
+                    <a href="https://hyw200199.github.io/2022/05/31/si-fen-shu/">https://hyw200199.github.io/2022/05/31/si-fen-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -621,12 +606,12 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/dp%E8%AE%A1%E6%95%B0/">
-                                    <span class="chip bg-color">dp计数</span>
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                    <span class="chip bg-color">数据结构</span>
                                 </a>
                             
-                                <a href="/tags/%E9%9A%BE%E9%A2%98/">
-                                    <span class="chip bg-color">难题</span>
+                                <a href="/tags/%E5%9B%9B%E5%88%86%E6%A0%91/">
+                                    <span class="chip bg-color">四分树</span>
                                 </a>
                             
                         </div>
@@ -800,17 +785,18 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/04/27/2022-tian-ti-sai/">
+                <a href="/2022/05/31/si-fen-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/girl1.jpg" class="responsive-img" alt="2022天梯赛">
+                        <img src="/medias/featureimages/jinx3.jpg" class="responsive-img" alt="四分树">
                         
-                        <span class="card-title">2022天梯赛</span>
+                        <span class="card-title">四分树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,9 +806,9 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -835,23 +821,16 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">拓扑排序</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
-                    <a href="/tags/dfs%E5%BA%8F/">
-                        <span class="chip bg-color">dfs序</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AE%B0%E5%BF%86%E5%8C%96%E6%90%9C%E7%B4%A2/">
-                        <span class="chip bg-color">记忆化搜索</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%89%AA%E6%9E%9D/">
-                        <span class="chip bg-color">剪枝</span>
+                    <a href="/tags/%E5%9B%9B%E5%88%86%E6%A0%91/">
+                        <span class="chip bg-color">四分树</span>
                     </a>
                     
                 </div>
@@ -865,13 +844,13 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/02/09/1html-ji-chu/">
+                <a href="/2022/05/17/kong-qi-wu-ran-yu-ce/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/%E5%AE%89%E6%99%BA%E7%84%953.jpg" class="responsive-img" alt="1html基础">
+                        <img src="/medias/featureimages/%E5%AE%89%E6%99%BA%E7%84%9517.jpg" class="responsive-img" alt="空气污染预测">
                         
-                        <span class="card-title">1html基础</span>
+                        <span class="card-title">空气污染预测</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -882,14 +861,14 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-02-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-17
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%88%AC%E8%99%AB/" class="post-category">
-                                    爬虫
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category">
+                                    人工智能
                                 </a>
                             
                             
@@ -899,16 +878,12 @@ Description最初你有一个长度为 N 的数字序列 A。为了方便起见�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%88%AC%E8%99%AB/">
-                        <span class="chip bg-color">爬虫</span>
+                    <a href="/tags/LSTM/">
+                        <span class="chip bg-color">LSTM</span>
                     </a>
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/requests/">
-                        <span class="chip bg-color">requests</span>
+                    <a href="/tags/%E7%89%B9%E5%BE%81%E9%A2%84%E6%B5%8B/">
+                        <span class="chip bg-color">特征预测</span>
                     </a>
                     
                 </div>
